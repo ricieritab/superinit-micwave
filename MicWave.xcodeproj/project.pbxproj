@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		9305F6B72512B63800A0E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305F6B62512B63800A0E7BD /* AppDelegate.swift */; };
 		9305F6B92512B63800A0E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305F6B82512B63800A0E7BD /* SceneDelegate.swift */; };
-		9305F6BB2512B63800A0E7BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305F6BA2512B63800A0E7BD /* ViewController.swift */; };
+		9305F6BB2512B63800A0E7BD /* MicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305F6BA2512B63800A0E7BD /* MicViewController.swift */; };
 		9305F6BE2512B63800A0E7BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9305F6BC2512B63800A0E7BD /* Main.storyboard */; };
 		9305F6C02512B63A00A0E7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9305F6BF2512B63A00A0E7BD /* Assets.xcassets */; };
 		9305F6C32512B63A00A0E7BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9305F6C12512B63A00A0E7BD /* LaunchScreen.storyboard */; };
+		9305F6CB2512B93F00A0E7BD /* MicSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305F6CA2512B93F00A0E7BD /* MicSampler.swift */; };
+		9305F6CF2512BC1B00A0E7BD /* MicRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305F6CE2512BC1B00A0E7BD /* MicRecorder.swift */; };
+		9305F6D12512BC5100A0E7BD /* AudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305F6D02512BC5100A0E7BD /* AudioSessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9305F6B32512B63800A0E7BD /* MicWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9305F6B62512B63800A0E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9305F6B82512B63800A0E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9305F6BA2512B63800A0E7BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9305F6BA2512B63800A0E7BD /* MicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicViewController.swift; sourceTree = "<group>"; };
 		9305F6BD2512B63800A0E7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9305F6BF2512B63A00A0E7BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9305F6C22512B63A00A0E7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9305F6C42512B63A00A0E7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9305F6CA2512B93F00A0E7BD /* MicSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSampler.swift; sourceTree = "<group>"; };
+		9305F6CE2512BC1B00A0E7BD /* MicRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicRecorder.swift; sourceTree = "<group>"; };
+		9305F6D02512BC5100A0E7BD /* AudioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,32 @@
 			children = (
 				9305F6B62512B63800A0E7BD /* AppDelegate.swift */,
 				9305F6B82512B63800A0E7BD /* SceneDelegate.swift */,
-				9305F6BA2512B63800A0E7BD /* ViewController.swift */,
-				9305F6BC2512B63800A0E7BD /* Main.storyboard */,
+				9305F6BA2512B63800A0E7BD /* MicViewController.swift */,
+				9305F6CC2512B94400A0E7BD /* Core */,
+				9305F6CD2512B95800A0E7BD /* Supporting Files */,
+			);
+			path = MicWave;
+			sourceTree = "<group>";
+		};
+		9305F6CC2512B94400A0E7BD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9305F6CA2512B93F00A0E7BD /* MicSampler.swift */,
+				9305F6CE2512BC1B00A0E7BD /* MicRecorder.swift */,
+				9305F6D02512BC5100A0E7BD /* AudioSessionManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9305F6CD2512B95800A0E7BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				9305F6BF2512B63A00A0E7BD /* Assets.xcassets */,
+				9305F6BC2512B63800A0E7BD /* Main.storyboard */,
 				9305F6C12512B63A00A0E7BD /* LaunchScreen.storyboard */,
 				9305F6C42512B63A00A0E7BD /* Info.plist */,
 			);
-			path = MicWave;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9305F6BB2512B63800A0E7BD /* ViewController.swift in Sources */,
+				9305F6BB2512B63800A0E7BD /* MicViewController.swift in Sources */,
+				9305F6D12512BC5100A0E7BD /* AudioSessionManager.swift in Sources */,
+				9305F6CF2512BC1B00A0E7BD /* MicRecorder.swift in Sources */,
 				9305F6B72512B63800A0E7BD /* AppDelegate.swift in Sources */,
+				9305F6CB2512B93F00A0E7BD /* MicSampler.swift in Sources */,
 				9305F6B92512B63800A0E7BD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MicWave/Info.plist;
+				INFOPLIST_FILE = "MicWave/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MicWave/Info.plist;
+				INFOPLIST_FILE = "MicWave/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
