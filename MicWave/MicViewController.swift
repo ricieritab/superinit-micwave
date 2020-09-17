@@ -10,7 +10,7 @@ import UIKit
 
 final class MicViewController: UIViewController {
   
-  private lazy var micSampler = MicSampler()
+  private lazy var micSampler = MicSampler(numberOfSamples: 10, monitoringInterval: 0.1)
   
   // MARK: - Lifecycle
 

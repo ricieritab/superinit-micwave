@@ -16,7 +16,7 @@ final class MicSampler {
   
   // MARK: - Init
   
-  init(numberOfSamples: Int = 10, monitoringInterval: TimeInterval = 1) {
+  init(numberOfSamples: Int, monitoringInterval: TimeInterval) {
     self.audioSessionManager = AudioSessionManager()
     self.micRecorder = MicRecorder(numberOfSamples: numberOfSamples, monitoringInterval: monitoringInterval)
   }
@@ -43,7 +43,9 @@ final class MicSampler {
     do {
       try micRecorder.prepareToRecord()
       try audioSessionManager.prepareAudioSessionToRecord()
+      
       micRecorder.start()
+      
     } catch let error {
       fatalError("😬 Oops - \(error.localizedDescription)")
     }
